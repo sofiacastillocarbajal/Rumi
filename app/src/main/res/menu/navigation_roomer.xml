@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_group_roomer"
+        android:icon="@drawable/account_group"
+        android:title="@string/my_group" />
+
+    <item
+        android:id="@+id/navigation_incidencia_roomer"
+        android:icon="@drawable/alert_circle"
+        android:title="@string/incidents" />
+
+    <item
+        android:id="@+id/navigation_tarea_roomer"
+        android:icon="@drawable/calendar_month"
+        android:title="@string/tasks" />
+
+</menu>

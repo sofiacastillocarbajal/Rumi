@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileDetailActivity"
+    android:background="@android:color/white">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_side"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/backImageButton"
+            app:srcCompat="@drawable/ic_arrow_back"
+            android:layout_width="@dimen/toolbar_side"
+            android:layout_height="match_parent"
+            android:tint="@color/colorPrimary"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/memberTextView"
+            android:text="@string/profile"
+            android:textSize="@dimen/toolbar_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/cerrarSesionImageButton"
+            app:srcCompat="@drawable/logout_variant"
+            android:layout_width="@dimen/toolbar_side"
+            android:layout_height="match_parent"
+            android:tint="@color/colorPrimary"
+            android:visibility="gone"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/ic_person_primary"
+        android:tint="@android:color/white"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:text="John Doe"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="@dimen/toolbar_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/extra_big_margin"
+        android:layout_marginStart="@dimen/extra_big_margin"/>
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:text="San Francisco, CA"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/extra_big_margin"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/phoneTextView"
+        android:text="+51993495632"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="@dimen/toolbar_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/extra_big_margin"
+        android:layout_marginEnd="@dimen/extra_big_margin"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/contactCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="@id/phoneTextView"
+        app:layout_constraintStart_toStartOf="@id/phoneTextView"
+        app:layout_constraintTop_toTopOf="@id/phoneTextView"
+        app:layout_constraintBottom_toBottomOf="@id/phoneTextView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/contact"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:text="@string/description_regular"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:maxLines="4"
+        android:lineSpacingExtra="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addressTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/extra_big_margin"
+        android:layout_marginTop="@dimen/extra_big_margin"
+        android:layout_marginEnd="@dimen/extra_big_margin"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/dataConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/extra_big_margin"
+        android:padding="@dimen/extra_big_margin"
+        android:background="@color/colorPrimaryLightLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView">
+
+        <TextView
+            android:id="@+id/ocupacionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skills"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/toolbar_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ocupacionTitleCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/editSkillsImageButton"
+            app:srcCompat="@drawable/ic_edit"
+            android:layout_width="@dimen/toolbar_side"
+            android:layout_height="wrap_content"
+            android:tint="@color/colorPrimary"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ocupacionTextView"
+            app:layout_constraintBottom_toBottomOf="@id/ocupacionTextView"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ocupacionTitleCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            app:cardBackgroundColor="@android:color/darker_gray"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/birthdateTitleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ocupacionTextView">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/ocupacionValidCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimaryLightLight"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/ocupacionValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:text="SOCIABLE | TRATABLE "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/birthdateTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:text="Fecha de nacimiento"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/toolbar_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/birthdateValueTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ocupacionTitleCardView" />
+
+        <TextView
+            android:id="@+id/birthdateValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:text="30/02/1993"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/toolbar_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthdateTitleTextView" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

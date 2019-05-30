@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="big_margin">16dp</dimen>
+    <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="toolbar_side">60dp</dimen>
+    <dimen name="extra_big_margin">32dp</dimen>
+    <dimen name="progressBarSize">40dp</dimen>
+</resources>

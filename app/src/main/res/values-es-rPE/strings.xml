@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rumi</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="e_mail">Correo</string>
+    <string name="password">Constraseña</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellidos</string>
+    <string name="gender">Genero</string>
+    <string name="terms">Al crear una cuenta accedes a nuestros términos y condiciones de privacidad</string>
+    <string name="groups">Grupos</string>
+    <string name="incidents">Incidents</string>
+    <string name="tasks">Tareas</string>
+    <string name="member">Integrantes</string>
+    <string name="profile">Perfil</string>
+    <string name="description_regular">Hi! My name is John, I\'m a creative geek from San Francisco, CA. I enjoy creating eye candy solutions for web and mobile apps. Contact me at john@mail.com</string>
+    <string name="create_task">Crear Tarea</string>
+    <string name="task_history">Historial de Tareas</string>
+    <string name="incident_history">Historial de Incidentes</string>
+    <string name="add_group">Agregar Grupo</string>
+    <string name="crear_grupo">CREAR GRUPO</string>
+    <string name="agregar_integrante">AGREGAR INTEGRANTE</string>
+    <string name="group_name">Nombre del grupo</string>
+    <string name="description">Descripción</string>
+    <string name="create_group">Crear grupo</string>
+    <string name="skills">Cualidades</string>
+    <string name="incident_detail">Detalle de la incidencia</string>
+    <string name="description_incident">Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsum</string>
+    <string name="resolved">Resuelto</string>
+    <string name="update">Actualizar</string>
+    <string name="contact">Contactar</string>
+    <string name="my_group">Mi grupo</string>
+    <string name="my_incidents">Mis Incidencias</string>
+    <string name="create_incidence">Crear Incidencia</string>
+    <string name="task_detail">Detalle de Tarea</string>
+    <string name="status">Estado</string>
+</resources>

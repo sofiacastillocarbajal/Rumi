@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="pe.edu.upc.rumi">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="pe.edu.upc.rumi.activities.OwnerTaskDetailActivity"></activity>
+        <activity android:name="pe.edu.upc.rumi.activities.TaskDetailActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.MyIncidentDetailActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.CreateIncidenceActivity" />
+        <activity
+            android:name="pe.edu.upc.rumi.activities.MainRoomerActivity"
+            android:label="@string/title_activity_main_roomer" />
+        <activity android:name="pe.edu.upc.rumi.activities.RegisterRoomerActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.LoginRoomerActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.IncidenceDetailActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.PropietarioProfileDetailActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.AddGroupActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.CreateTaskActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.ProfileDetailActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.GroupDetailActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.RegisterPropietarioActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.LoginPropietarioActivity" />
+        <activity android:name="pe.edu.upc.rumi.activities.RegisterRoomateActivity" />
+        <activity
+            android:name="pe.edu.upc.rumi.activities.MainPropietarioActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name="pe.edu.upc.rumi.activities.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

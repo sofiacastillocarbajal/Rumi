@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Rumi</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last name</string>
+    <string name="gender">Gender</string>
+    <string name="terms">By creating an account you agree to our terms and conditions of privacy</string>
+    <string name="groups">Groups</string>
+    <string name="incidents">Incidents</string>
+    <string name="tasks">Tasks</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="member">Members</string>
+    <string name="profile">Profile</string>
+    <string name="description_regular">Hi! My name is John, I\'m a creative geek from San Francisco, CA. I enjoy creating eye candy solutions for web and mobile apps. Contact me at john@mail.com</string>
+    <string name="create_task">Create Task</string>
+    <string name="task_history">Task History</string>
+    <string name="incident_history">Incident History</string>
+    <string name="add_group">Add Group</string>
+    <string name="crear_grupo">CREATE GROUP</string>
+    <string name="agregar_integrante">ADD MEMBER</string>
+    <string name="group_name">Group name</string>
+    <string name="description">Description</string>
+    <string name="create_group">Create Group</string>
+    <string name="skills">Skills</string>
+    <string name="incident_detail">Incident Detail</string>
+    <string name="description_incident">Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsum</string>
+    <string name="resolved">Resolved</string>
+    <string name="update">Update</string>
+    <string name="contact">Contact</string>
+    <string name="title_activity_main_roomer">MainRoomerActivity</string>
+    <string name="my_group">My group</string>
+    <string name="my_incidents">My Incidents</string>
+    <string name="create_incidence">Create Incidence</string>
+    <string name="task_detail">Task Detail</string>
+    <string name="status">Status</string>
+</resources>
