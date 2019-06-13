@@ -23,8 +23,8 @@
     <string name="profile">Profile</string>
     <string name="description_regular">Hi! My name is John, I\'m a creative geek from San Francisco, CA. I enjoy creating eye candy solutions for web and mobile apps. Contact me at john@mail.com</string>
     <string name="create_task">Create Task</string>
-    <string name="task_history">Task History</string>
-    <string name="incident_history">Incident History</string>
+    <string name="task_history">Tasks</string>
+    <string name="incident_history">Incidents</string>
     <string name="add_group">Add Group</string>
     <string name="crear_grupo">CREATE GROUP</string>
     <string name="agregar_integrante">ADD MEMBER</string>
@@ -43,4 +43,12 @@
     <string name="create_incidence">Create Incidence</string>
     <string name="task_detail">Task Detail</string>
     <string name="status">Status</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+
+    <string-array name="array_status">
+        <item>TODO</item>
+        <item>DOING</item>
+        <item>DONE</item>
+    </string-array>
 </resources>

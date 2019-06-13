@@ -9,6 +9,7 @@ class RumiApi {
         val signInUrl = "$BASE_URL/account/signin"
         val signUp = "$BASE_URL/account/signup"
         val validUsernameUrl = "$BASE_URL/account/username"
+        val resetPassword = "$BASE_URL/account/reset-password"
 
         fun incidencesByGroup(groupId: String?): String {
             return "$groupsUrl/$groupId/incidences"

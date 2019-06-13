@@ -8,6 +8,7 @@ import android.support.v7.widget.CardView
 import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.Toast
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
@@ -120,12 +121,14 @@ class LoginPropietarioActivity : AppCompatActivity() {
     }
 
     fun showDialogPositive(titulo: String?, detalle: String?) {
-        val builder = AlertDialog.Builder(this@LoginPropietarioActivity)
-        builder.setTitle(titulo)
-        builder.setMessage(detalle)
-        builder.setPositiveButton("Ok"){dialog, which ->}
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+//        val builder = AlertDialog.Builder(this@LoginPropietarioActivity)
+//        builder.setTitle(titulo)
+//        builder.setMessage(detalle)
+//        builder.setPositiveButton("Ok"){dialog, which ->}
+//        val dialog: AlertDialog = builder.create()
+//        dialog.show()
+
+        Toast.makeText(this, detalle, Toast.LENGTH_LONG).show()
     }
 }
 

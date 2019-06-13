@@ -9,6 +9,7 @@ import android.support.v7.widget.CardView
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
@@ -93,7 +94,7 @@ class IncidenceDetailActivity : AppCompatActivity() {
                 object: ParsedRequestListener<Incident> {
                     override fun onResponse(response: Incident?) {
                         response?.apply {
-                            if (response.resolved == "true"){
+                            if (response != null){
                                 showDialogPositiveFinal("Mensaje", "Incidencia actualizada correctamente")
                             }
                             else{
@@ -117,21 +118,26 @@ class IncidenceDetailActivity : AppCompatActivity() {
     }
 
     fun showDialogPositive(titulo: String?, detalle: String?) {
-        val builder = AlertDialog.Builder(this@IncidenceDetailActivity)
-        builder.setTitle(titulo)
-        builder.setMessage(detalle)
-        builder.setPositiveButton("Ok"){dialog, which ->}
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+//        val builder = AlertDialog.Builder(this@IncidenceDetailActivity)
+//        builder.setTitle(titulo)
+//        builder.setMessage(detalle)
+//        builder.setPositiveButton("Ok"){dialog, which ->}
+//        val dialog: AlertDialog = builder.create()
+//        dialog.show()
+
+        Toast.makeText(this, detalle, Toast.LENGTH_LONG).show()
     }
 
     fun showDialogPositiveFinal(titulo: String?, detalle: String?) {
-        val builder = AlertDialog.Builder(this@IncidenceDetailActivity)
-        builder.setTitle(titulo)
-        builder.setMessage(detalle)
-        builder.setPositiveButton("Ok"){dialog, which -> finish()}
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+//        val builder = AlertDialog.Builder(this@IncidenceDetailActivity)
+//        builder.setTitle(titulo)
+//        builder.setMessage(detalle)
+//        builder.setPositiveButton("Ok"){dialog, which -> finish()}
+//        val dialog: AlertDialog = builder.create()
+//        dialog.show()
+
+        Toast.makeText(this, detalle, Toast.LENGTH_LONG).show()
+        finish()
     }
 }
 

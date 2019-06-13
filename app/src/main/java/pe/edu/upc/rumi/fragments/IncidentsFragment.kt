@@ -37,6 +37,7 @@ class IncidentsFragment : Fragment() {
     private var groups: List<Group> = ArrayList()
     private var incidents: ArrayList<Incident> = ArrayList<Incident>()
     private var incidentsAdapter = IncidentsAdapter(incidents, 1)
+    private var contGruposAnalizados = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -64,17 +65,19 @@ class IncidentsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         getIncidentsHistory()
-        incidentsAdapter.verifyItemChanged()
     }
 
     private fun getIncidentsHistory() {
         progressBar.visibility = View.VISIBLE
+        groups = ArrayList()
+
+        incidents.clear()
+        contGruposAnalizados = 0
+        incidentsAdapter.notifyDataSetChanged()
 
         AndroidNetworking.get(RumiApi.groupsUrl)
             .addHeaders("Authorization", "Bearer ${UserDefaults.token}")
             .addHeaders("Content-Type", "application/json")
-            .setPriority(Priority.HIGH)
-            .setTag(getString(R.string.app_name))
             .build()
             .getAsJSONArray(object : JSONArrayRequestListener {
                 override fun onResponse(response: JSONArray) {
@@ -90,9 +93,8 @@ class IncidentsFragment : Fragment() {
     }
 
     fun getIncidents() {
-        incidents.clear()
-        for (group in groups) {
-            getIncidentsByGroup(group.groupId)
+        for (i in 0 until groups.size){
+            getIncidentsByGroup(groups[i].groupId)
         }
     }
 
@@ -105,13 +107,21 @@ class IncidentsFragment : Fragment() {
             .build()
             .getAsJSONArray(object : JSONArrayRequestListener {
                 override fun onResponse(response: JSONArray) {
+                    contGruposAnalizados++
                     incidentsAdapter.apply {
                         incidents.addAll(Incident.from(response))
-                        notifyDataSetChanged()
+                        //si es la ultima vez
+                        if (contGruposAnalizados >= groups.size){
+                            val lista = ArrayList(incidents.sortedWith(compareBy{ it.incidenceId }))
+                            incidents.clear()
+                            incidents.addAll(lista)
+                            notifyDataSetChanged()
+                        }
                     }
                     progressBar.visibility = View.GONE
                 }
                 override fun onError(anError: ANError) {
+                    contGruposAnalizados++
                     anError?.apply { Toast.makeText(vista.context, "Error al cargar los grupos", Toast.LENGTH_LONG).show() }
                     incidentsAdapter.apply {
                         incidents = ArrayList()
