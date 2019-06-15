@@ -1,9 +1,11 @@
 package pe.edu.upc.rumi.activities
 
 import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
+import android.support.v7.widget.AppCompatImageView
 import android.support.v7.widget.CardView
 import android.view.View
 import android.widget.EditText
@@ -29,6 +31,10 @@ class LoginRoomerActivity : AppCompatActivity() {
 
     private lateinit var progressBar: ProgressBar
 
+    private lateinit var googleAppCompatImageView: AppCompatImageView
+    private lateinit var facebookAppCompatImageView: AppCompatImageView
+    private lateinit var instagramAppCompatImageView: AppCompatImageView
+
     val TAG = "Login"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +47,13 @@ class LoginRoomerActivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordEditText)
         progressBar = findViewById(R.id.progressBar)
 
+        googleAppCompatImageView = findViewById(R.id.googleAppCompatImageView)
+        googleAppCompatImageView.setOnClickListener { openWeb("https://www.youtube.com/")}
+        facebookAppCompatImageView = findViewById(R.id.facebookAppCompatImageView)
+        facebookAppCompatImageView.setOnClickListener { openWeb("https://www.facebook.com/")}
+        instagramAppCompatImageView = findViewById(R.id.instagramAppCompatImageView)
+        instagramAppCompatImageView.setOnClickListener { openWeb("https://www.instagram.com/")}
+
         registrarAhoraCardView = findViewById(R.id.registrarAhoraCardView)
         registrarAhoraCardView.setOnClickListener {
             val intent = Intent(this@LoginRoomerActivity, RegisterRoomerActivity::class.java)
@@ -51,6 +64,12 @@ class LoginRoomerActivity : AppCompatActivity() {
         iniciarSesionCardView.setOnClickListener {
             login()
         }
+    }
+
+    fun openWeb(url: String) {
+        val openURL = Intent(android.content.Intent.ACTION_VIEW)
+        openURL.data = Uri.parse(url)
+        startActivity(openURL)
     }
 
     fun login() {

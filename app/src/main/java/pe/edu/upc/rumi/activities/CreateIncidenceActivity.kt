@@ -77,15 +77,11 @@ class CreateIncidenceActivity : AppCompatActivity() {
                 Task::class.java,
                 object: ParsedRequestListener<Task> {
                     override fun onResponse(response: Task?) {
-                        response?.apply {
-                            response.apply {
-                                if (taskId != "") {
-                                    showDialogPositiveFinal("Mensaje", "Incidencia creada correctamente.")
-                                }
-                                else{
-                                    showDialogPositive("Mensaje", "Error al crear la incidencia")
-                                }
-                            }
+                        if (response != null) {
+                            showDialogPositiveFinal("Mensaje", "Incidencia creada correctamente.")
+                        }
+                        else{
+                            showDialogPositive("Mensaje", "Error al crear la incidencia")
                         }
                     }
                     override fun onError(anError: ANError?) {
