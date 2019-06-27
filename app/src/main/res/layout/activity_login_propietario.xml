@@ -102,7 +102,7 @@
         android:layout_marginBottom="@dimen/big_margin"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,7 +145,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/olvidasteTuContrasenaTextView" />
+        app:layout_constraintTop_toBottomOf="@id/olvidasteTuContrasenaTextView"
+        android:visibility="gone"/>
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/googleAppCompatImageView"
@@ -158,7 +159,8 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/oIngresarConTuContrasenaTextView"
-        app:srcCompat="@drawable/google_plus" />
+        app:srcCompat="@drawable/google_plus"
+        android:visibility="gone"/>
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/facebookAppCompatImageView"
@@ -170,7 +172,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/googleAppCompatImageView"
         app:layout_constraintTop_toBottomOf="@id/oIngresarConTuContrasenaTextView"
-        app:srcCompat="@drawable/facebook" />
+        app:srcCompat="@drawable/facebook"
+        android:visibility="gone"/>
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/instagramAppCompatImageView"
@@ -182,7 +185,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/facebookAppCompatImageView"
         app:layout_constraintTop_toBottomOf="@id/oIngresarConTuContrasenaTextView"
-        app:srcCompat="@drawable/instagram" />
+        app:srcCompat="@drawable/instagram"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/noTienesCuentaTextView"
@@ -206,7 +210,7 @@
         android:layout_marginBottom="@dimen/big_margin"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"

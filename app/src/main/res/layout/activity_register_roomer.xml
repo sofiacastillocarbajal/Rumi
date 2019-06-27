@@ -192,7 +192,7 @@
         android:layout_marginBottom="@dimen/big_margin"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
